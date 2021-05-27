@@ -3,5 +3,5 @@
 ## Install:
 ```
 install.packages("devtools")
-devtools::install_github("username/packagename")
+devtools::install_github("InstituteforDiseaseModeling/IDMToolsRUtils")
 ```
