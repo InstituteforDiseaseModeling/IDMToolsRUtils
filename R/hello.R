@@ -22,7 +22,7 @@ Clinton<-function(){
 
 #' Find path seperator
 #'
-#' @return Path seperator. For windowsm this is ";". For all other systems, it is ";":
+#' @return Path seperator. For windows this is ";". For all other systems, it is ";":
 get_path_sep <- function() {
   # TODO Add memorization here
   sysinf <- Sys.info()
