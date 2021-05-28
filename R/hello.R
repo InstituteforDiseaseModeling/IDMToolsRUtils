@@ -21,6 +21,7 @@ Clinton<-function(){
 }
 
 #' Find path seperator
+#'
 #' @return Path seperator. For windowsm this is ";". For all other systems, it is ";":
 get_path_sep <- function() {
   # TODO Add memorization here
@@ -32,8 +33,11 @@ get_path_sep <- function() {
   path_sep
 }
 
+#' Find file on environment path
+#'
+#' @description
 #' Find the path of a file(if it exists) using an environment path defined on an environment variable. The working directory
-#' is searched first
+#' is searched first.
 #'
 #' @param filename Filename to find using environment var
 #' @param environment_var Environment var to search. Defaults to PATH
@@ -62,12 +66,18 @@ find_file_on_env_path <- function(filename, environment_var = "PATH", stop_if_no
   }
 }
 
+#' Source file on environment path
+#'
+#' @description
 #' Source a file(if it exists) using an environment path defined on an environment variable
 #' If the file does not exist, an error will be thrown
 #'
 #' @param filename Filename to source using environment var
 #' @param environment_var Environment var to use for search. Defaults to PATH
 #'
+#' @examples
+#' source_file_on_env_path(file.path("R", "make_results_summary.R"))
+#' source_file_on_env_path(file.path("example.R"))
 source_file_on_env_path <- function(filename, environment_var = "PATH") {
   source(find_file_on_env_path(filename, environment_var, TRUE))
 }
