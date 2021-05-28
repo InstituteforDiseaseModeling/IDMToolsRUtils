@@ -42,6 +42,7 @@ get_path_sep <- function() {
 #' @param filename Filename to find using environment var
 #' @param environment_var Environment var to search. Defaults to PATH
 #' @param stop_if_not_found If true, an "error" will occur with a stop when a file is not found. Defaults to False.
+#'
 #' @return Path of the file. Possibly returns NULL when stop_if_not_found is FALSE and the file is not found
 #' @note Possible of a stopping error when stop_if_not_found is TRUE and the file is not found
 find_file_on_env_path <- function(filename, environment_var = "PATH", stop_if_not_found = FALSE) {
